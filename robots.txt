@@ -4,6 +4,6 @@
 User-agent: *
 Disallow: /assets/
 Disallow: /fonts/
-Disallow: /images/
 Disallow: /scripts/
 Disallow: /styles/
+Disallow: /void/
