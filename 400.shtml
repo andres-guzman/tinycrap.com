@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 400</title>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        :root {
+            --color__light: rgba(255, 255, 255, 1);
+            --color__dark: rgba(11, 12, 15, 1);
+            --drop--shadow: 4px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background: var(--color__dark);
+            color: var(--color__light);
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        @font-face {
+            font-family: "PF";
+            src: url('/fonts/PFArmaFive.woff2') format('woff2'),
+                url('/fonts/PFArmaFive.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @keyframes leftBottom {
+            0% {
+                transform: translate(0,0);
+            }
+
+            100% {
+                transform: translate(2rem, 2rem);
+            }
+        }
+        
+
+        #background {
+            z-index: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background::after {
+            opacity: 1;
+            content: '';
+            position: absolute;
+            overflow: hidden;
+            left: -8rem;
+            top: -8rem;
+            width: calc(100% + 8rem);
+            height: calc(100% + 8rem);
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iLTEwIDAgODAgODAiPg0KICA8cmVjdCB4PSItMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIvPg0KPC9zdmc+");
+            background-size: 2rem 2rem;
+            animation-name: leftBottom;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }        
+
+        .modal--wrapper {            
+            max-width: 600px;
+            aspect-ratio: 4/3;
+            filter: drop-shadow(var(--drop--shadow) var(--drop--shadow) 0 var(--color__dark));
+        }
+
+        
+        .modal {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color__light);
+            width: calc(100% - var(--drop--shadow));
+            height: calc(100% - var(--drop--shadow));
+            border: var(--drop--shadow) solid var(--color__dark);
+            clip-path: polygon(0 var(--drop--shadow), var(--drop--shadow) var(--drop--shadow), var(--drop--shadow) 0, calc(100% - var(--drop--shadow)) 0, calc(100% - var(--drop--shadow)) var(--drop--shadow), 100% var(--drop--shadow), 100% calc(100% - var(--drop--shadow)), calc(100% - var(--drop--shadow)) calc(100% - var(--drop--shadow)), calc(100% - var(--drop--shadow)) 100%, var(--drop--shadow) 100%, var(--drop--shadow) calc(100% - var(--drop--shadow)), 0 calc(100% - var(--drop--shadow)));
+        }
+
+        .modal--topbar {
+            color: var(--color__light);
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: var(--color__dark);
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MC4wMDEiIGhlaWdodD0iNTAuMDAyIiB2aWV3Qm94PSItMTAgLTEwIDUwLjAwMSA1MC4wMDIiPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMCAxMGgxMHYxMEgxMHpNMjAgMGgxMHYxMEgyMHpNMjAgMjBoMTB2MTBIMjB6TTAgMGgxMHYxMEgwek0zMC4wMDEtMTBoMTBWMGgtMTB6TS0xMC0xMEgwVjBoLTEwek0zMC4wMDEgMzAuMDAyaDEwdjEwLjAwMWgtMTB6TS0xMCAzMC4wMDJIMHYxMC4wMDFoLTEwek0wIDIwaDEwdjEwSDB6Ii8+PC9zdmc+DQo=");
+            background-size: 16px;
+            background-position: center right 8px;
+            background-repeat: no-repeat;
+            padding: 0 0 6px 12px;
+        }
+
+        .modal--content {
+            color: var(--color__dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex: 2;
+            padding: 7%;
+        }
+
+        h1 {
+            font: 34px PF, Arial, Helvetica, sans-serif;
+            line-height: 1.25;
+            margin: 0 0 10% 0;
+        }
+
+        p {
+            color: var(--color__light);
+            font: 16px PF, Arial, Helvetica, sans-serif;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        a {
+            color: var(--color__dark);
+            font: 16px PF, Arial, Helvetica, sans-serif;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .modal--content > p {
+            color: var(--color__dark);
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="modal--wrapper">
+        <div class="modal">
+            <div class="modal--topbar">
+                <p>Error 400</p>
+            </div>
+            
+            <div class="modal--content">
+                <h1>Bad request. The server could not understand your request.</h1>
+                <p>
+                    1. Try clearing your browser's cache and cookies<br>
+                    2. Try disabling browser extensions<br>
+                    3. Flush the DNS cache<br>
+                    4. Troubleshoot your internet connection
+                </p>
+                <br>
+                <br>
+                <a href="https://www.tinycrap.com">Click here to try again</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

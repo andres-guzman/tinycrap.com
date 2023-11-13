@@ -1,0 +1,17 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+		.logo--fill {
+			fill: #6e32e1;
+		}
+		@media (prefers-color-scheme: dark) {
+			.logo--fill {
+				fill: #ffffff;
+			}
+		}
+	</style>
+	<g>
+		<path class="logo--fill" d="M226,117.2l-27.6-43.4l-62.5,105.3l-64.4-37.3l62.2-107.7C139,25,143,16.6,153,15.8l75.9-0.7 c10.6-1.5,21,4.2,29,13.8l27.3,42.6l21.1-12.6l-17,94.2l-84.8-23.7L226,117.2z"/>
+		<path class="logo--fill" d="M96.1,236.1l-24.6,45.2l122.4,3.7l-1.4,74.5l-124.3-2.3c-10.3-0.3-19.6,0.1-25.3-8.1l-37.3-66 c-6.5-8.5-6.5-20.4-1.9-32.1l23.8-44.5L6.1,194l90.8-30.7l20.4,85.6L96.1,236.1z"/>
+		<path class="logo--fill" d="M273.9,286.4l51.4-2.2l-59.7-107l64.7-36.9l61.8,107.8c5,9.1,10.1,16.8,6,26L360.5,340 c-4.1,9.9-14.2,16-26.5,18.1l-50.3,2.4l0.3,24.6L211,323l63-61.4L273.9,286.4z"/>
+	</g>
+</svg>
