@@ -108,6 +108,7 @@ $_SESSION['selected_image'] = $img;
 	<link rel="icon" href="/icon.png" type="image/png">
 	<link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any">
 	<link rel="preload" href="fonts/PFArmaFive.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
 	<script src="scripts/tinycrap.min.js" defer></script>
 	<meta name="theme-color" content="#631bde">
 </head>
