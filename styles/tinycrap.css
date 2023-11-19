@@ -28,6 +28,16 @@
 }
 
 
+@font-face {
+    font-family: "NB";
+    src: url('../fonts/nbarchitektstd-bold-webfont.woff2') format('woff2'),
+         url('../fonts/nbarchitektstd-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 /* ======================================================
     Custom properties
@@ -39,8 +49,8 @@
     --fontFamily: PF, Arial, Helvetica, sans-serif;
     --fontFamily__second: Jet, Arial, Helvetica, sans-serif;
 
-    --fontSize__tiny: clamp(0.875rem, 0.75vw, 1.75rem);
-    --fontSize__small: clamp(0.875rem, 0.945vw, 2rem);
+    --fontSize__tiny: clamp(0.875rem, 0.725vw, 1.75rem);
+    --fontSize__small: clamp(0.875rem, 0.835vw, 2rem);
     --fontSize__big: clamp(1rem, 3vw, 9rem);
 
     --color__light: rgba(255, 255, 255, 1);
