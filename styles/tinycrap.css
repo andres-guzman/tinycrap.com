@@ -264,7 +264,6 @@ header {
 
 
 header > p {
-    text-transform: uppercase;
     margin-bottom: max(12px, 6.5%);
 }
 
