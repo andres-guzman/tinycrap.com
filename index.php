@@ -138,13 +138,13 @@ $_SESSION['selected_image'] = $img;
 
 			<header>
 				<h1>A very large collection of random images/gifs</h1>
-				<p class="is--visible">This website randomly loads funny, weird, creepy and just plain dumb images. There are over 5.600 images and more are being added all the time. Useless? you bet!</p>
+				<p class="is--visible">This website randomly loads funny, weird, creepy and just plain dumb images. They've been collected over a 16 year period, and they keep coming. Useless? you bet!</p>
 				<p class="is--visible">Unique visits this month: <?php echo number_format($uniqueVisitorCount, 0, '.', '.'); ?></p>
 			</header>
 
 			<footer class="is--visible">
-				<p>Note: WebP image format is way more efficient than JPEG. This website uses webp exclusively. If you're having trouble viewing the images it's because you're using an ancient browser. Please upgrade!</p>
-				<p>Visitor IP: <?php echo $ip; ?> - © <?php echo date("Y"); ?> Made by <a target="_blank" href="https://twitter.com/jovenchurro">Andres</a>.</p>
+				<p>Note: WebP image format is way more efficient than JPEG. This website uses WebP exclusively. If you're having trouble viewing the images it's because you're using an ancient browser. Please upgrade.</p>
+				<p>Visitor IP: <?php echo $ip; ?> - (© <?php echo date("Y"); ?> Made by <a target="_blank" href="https://twitter.com/jovenchurro">Andres</a>)</p>
 			</footer>
 		</section>
 
