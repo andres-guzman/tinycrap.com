@@ -144,7 +144,7 @@ $_SESSION['selected_image'] = $img;
 
 			<footer class="is--visible">
 				<p>Note: WebP image format is way more efficient than JPEG. This website uses WebP exclusively. If you're having trouble viewing the images it's because you're using an ancient browser. Please upgrade.</p>
-				<p>Visitor IP: <?php echo $ip; ?> - (© <?php echo date("Y"); ?> Made by <a target="_blank" href="https://twitter.com/jovenchurro">Andres</a>)</p>
+				<p>Visitor IP: <?php echo $ip; ?> - (© <?php echo date("Y"); ?> Made by <a target="_blank" href="https://twitter.com/jovenchurro">Andres</a>).</p>
 			</footer>
 		</section>
 
